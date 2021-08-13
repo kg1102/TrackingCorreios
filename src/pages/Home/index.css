@@ -1,0 +1,134 @@
+html,
+body {
+	background: #121212;
+}
+
+header {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	background-color: #101010;
+	padding: 6px 35px;
+}
+
+header h1 {
+	margin-left: 1rem;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+}
+
+.nav {
+	justify-content: space-between;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.nav nav {
+	margin-left: 56rem;
+}
+
+.nav nav h2 {
+	margin-left: 1rem;
+}
+
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #101010;
+}
+
+footer h2 {
+	text-align: center;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+}
+
+form {
+	z-index: 100;
+	position: relative;
+	margin: 10rem auto;
+	border-radius: 10px;
+	max-width: 500px;
+	padding: 2rem;
+}
+
+form input {
+	margin-top: 15px;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background: #C4C4C4;
+	width: 96%;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 10px;
+	outline: none;
+}
+
+form input::placeholder {
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+form button {
+	margin-top: 15px;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background: #7ACA66;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 10px;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3 ease;
+}
+
+form button:hover {
+	transition: all 0.3s ease;
+	transform: scale(1.02);
+	filter: brightness(0.9);
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 15px;
+	text-align: left;
+	font-size: 20px;
+}
+
+tr:nth-child(even) {
+	font-family: 'Poppins', sans-serif;
+	background-color: #eee;
+}
+
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+th {
+	background-color: #C4C4C4;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+}
+
+.result-title {
+	margin-top: 20rem;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	font-size: 3.7rem;
+}
