@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <img src={LogoImg}/>
+        <img src={LogoImg} alt="Logo do website"/>
         <h1 onClick={()=>history.push('/')}>TrackingCorreios</h1>
         <div class="nav">
             <nav style={{display: 'flex'}}>
@@ -23,7 +23,7 @@ function App() {
 
       <div id="error">
         <h1>Página não encontrada</h1>
-        <img src={NotFoundImg} height="400"/>
+        <img src={NotFoundImg} height="400" alt="Imagem de erro"/>
       </div>
 
       <footer>

@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <img src={LogoImg}/>
+        <img src={LogoImg} alt="Logo do website"/>
         <h1 onClick={()=>history.push('/')}>TrackingCorreios</h1>
         <div class="nav">
             <nav style={{display: 'flex'}}>
