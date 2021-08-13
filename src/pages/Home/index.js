@@ -44,7 +44,7 @@ function App() {
             <nav style={{display: 'flex'}}>
               <h2 onClick={()=>history.push('/about')}>Sobre</h2>
               <h2 onClick={()=>history.push('/donate')}>Donate</h2>
-              <h2 onClick={()=>history.push('/github')}>Github</h2>
+              <h2 onClick={()=>document.location.href="https://github.com/kg1102/correiostracker-frontend"}>Github</h2>
             </nav>
         </div>
       </header>
