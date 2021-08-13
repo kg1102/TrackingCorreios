@@ -23,8 +23,7 @@ function App() {
       .then(result => {
         if (result.message === "OK") {
           setShow(!show);
-          setData(result.data);
-          console.log(result.data);
+          setData(result.data.status_list);
         }else{
           setShow(false);
           alert(result.message);
