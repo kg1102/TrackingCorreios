@@ -5,30 +5,36 @@ function TrackingResult({ data }) {
   return (
     <>
       <ul className="list-group">
-        {data.map(item => {
-          const { data, origem, destino, status } = item;
-
-          return (
-            <>
-              <h1 className="result-title">Resultado: </h1>
-              <table key={status} style={{width:'100%'}}>
-                <tr>
-                  <th>origem</th>
-                  <th>data</th>
-                  <th>destino</th>
-                  <th>status</th>
-                </tr>
-                <tr>
-                  <td>XingXong {origem}</td>
-                  <td>13/13/1337 {data}</td>
-                  <td>United Estates {destino}</td>
-                  <td>Está nos servidores da maicrosoft... {status}</td>
-                </tr>
-              </table>
-            </>
-          );
-        })}
+      <h1 className="result-title">Resultado: </h1>
+        <table style={{width:'100%'}}>
+          <tr>
+            <th>origem</th>
+            <th>data</th>
+            <th>destino</th>
+            <th>status</th>
+          </tr>
+          {data.map(item => {
+            const { status, data, origem, destino } = item;
+            return (
+              <>
+                  <tr>
+                    <td>{origem}</td>
+                    <td>{data}</td>
+                    <td>{destino}</td>
+                    <td>{status}</td>
+                  </tr>
+              </>
+            );
+          })}
+        </table>
       </ul>
+      <button 
+        type="submit" 
+        className="btn"
+        onClick={()=>window.location.reload()}
+      >
+          Realizar outra pesquisa
+      </button>
     </>
   );
 }
