@@ -18,15 +18,15 @@ function App() {
       return alert('O Campo do código de rastreio está em branco!');
     }
 
-    fetch(`http://localhost:3001/?tracking=${codigoRastreio}`)
+    fetch(`https://kgtrackingcorreios.herokuapp.com/?tracking=${codigoRastreio}`)
       .then(response => response.json())
       .then(result => {
-        if (result.message === "OK") {
+        if (result.data.message === "OK") {
           setShow(!show);
           setData(result.data.status_list);
         }else{
           setShow(false);
-          alert(result.message);
+          alert(result.data.message);
         }
       });
   }
