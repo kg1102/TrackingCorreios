@@ -26,9 +26,9 @@ function App() {
       .then(response => response.json())
       .then(result => {
         if (result.data.message === "OK") {
-          // setShow(!show);
-          // setLoading(false);
-          // setData(result.data.status_list);
+          setShow(!show);
+          setLoading(false);
+          setData(result.data.status_list);
         }else{
           setShow(false);
           alert(result.data.message);
