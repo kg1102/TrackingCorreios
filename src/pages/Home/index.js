@@ -3,11 +3,13 @@ import { useHistory } from "react-router-dom";
 import "./index.css";
 import TrackingResult from "../../components/TrackingResult";
 import LogoImg from '../../images/logoimg.svg';
+import SyncLoader from "react-spinners/SyncLoader";
 
 function App() {
   const [data, setData] = useState([]);
   const [codigoRastreio, setCodigoRastreio] = useState('');
   const [show, setShow] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const history = useHistory();
 
@@ -18,12 +20,15 @@ function App() {
       return alert('O Campo do código de rastreio está em branco!');
     }
 
+    setLoading(true);
+
     fetch(`https://kgtrackingcorreios.herokuapp.com/?tracking=${codigoRastreio}`)
       .then(response => response.json())
       .then(result => {
         if (result.data.message === "OK") {
-          setShow(!show);
-          setData(result.data.status_list);
+          // setShow(!show);
+          // setLoading(false);
+          // setData(result.data.status_list);
         }else{
           setShow(false);
           alert(result.data.message);
@@ -63,6 +68,12 @@ function App() {
           <button type="submit" className="btn btn-primary">
             Verificar
           </button>
+          {loading ? 
+          <div id="loading">
+            <h1>Carregando...</h1> 
+            <SyncLoader color={"#ffffff"}/>
+          </div>
+          : null} 
         </form>
       : 
         <TrackingResult data={data} />

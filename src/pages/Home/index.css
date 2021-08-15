@@ -90,6 +90,14 @@ form input::placeholder {
 	transition: all 0.3 ease;
 }
 
+#loading {
+	border: none;
+	color: white;
+	margin-top: 3rem;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+}
+
 form button:hover {
 	transition: all 0.3s ease;
 	transform: scale(1.02);
